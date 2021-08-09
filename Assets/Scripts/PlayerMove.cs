@@ -27,7 +27,7 @@ public class PlayerMove : MonoBehaviour
             // applique la direction du joueur en fonction de l'angle de la camera
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            // applique la méthode pour lié la direction joueur/camera
+            // applique la méthode pour lié la direction joueur/camera   targetAngle
             Vector3 movDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(movDir.normalized * speed * Time.deltaTime);
         }
